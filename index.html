@@ -9,7 +9,7 @@
 <body>
 
 <div class="container">
-    <img src="op.png"></img>
+    <img src="yu.png"></img>
     <div class="old-paper" id="oldPaper">
         <div class="flame" id="flame"></div>
         <textarea class="message-input" id="messageInput" placeholder="Write your message here..."></textarea>
@@ -21,7 +21,7 @@
     <div class="bonfire-container">
         <div class="bonfire" id="bonfire"></div>
     </div>
-<div class="burn">
+<div class="burn id="flamez>
       <div class="flame"></div>
       <div class="flame"></div>
       <div class="flame"></div>
@@ -64,8 +64,13 @@
                 clearInterval(interval);
                 oldPaper.style.opacity = '0';
                 flame.style.opacity = '0'; 
-                alert('Padayon, Aming Kaulayaw');
-                location.reload();
+
+                document.body.style.transition = 'background-color 1s';
+                document.body.style.backgroundColor = 'black';
+
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
             }, 3000);
         } else {
             alert('Please write a message before burning it!');
@@ -86,9 +91,6 @@
             alert('Please write a message before keeping it!');
         }
     });
-
-
-
 </script>
 
 </body>
