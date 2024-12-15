@@ -74,7 +74,23 @@
                 }, 2000);
             }, 3000);
         } else {
-            alert('Please write a message before burning it!');
+            const alertBox = document.createElement('div');
+            alertBox.textContent = 'Please write a message before burning it!';
+            alertBox.style.position = 'fixed';
+            alertBox.style.top = '50%';
+            alertBox.style.left = '50%';
+            alertBox.style.transform = 'translate(-50%, -50%)';
+            alertBox.style.padding = '20px';
+            alertBox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            alertBox.style.color = 'white';
+            alertBox.style.borderRadius = '10px';
+            alertBox.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.5)';
+            alertBox.style.zIndex = '1000';
+            document.body.appendChild(alertBox);
+
+            setTimeout(() => {
+                alertBox.remove();
+            }, 2000);
         }
     });
 
@@ -83,13 +99,31 @@
 
         if (message) {
             oldPaper.style.animation = 'foldPaper 2s forwards';
+setTimeout(() => {
+
+                setTimeout(() => {
+                    alert('Padayon, Aming Kaulayaw');
+                    location.reload();
+                }, 2000);
+            }, 3000);
+        } else {
+            const alertBox = document.createElement('div');
+            alertBox.textContent = 'Please write a message before burning it!';
+            alertBox.style.position = 'fixed';
+            alertBox.style.top = '50%';
+            alertBox.style.left = '50%';
+            alertBox.style.transform = 'translate(-50%, -50%)';
+            alertBox.style.padding = '20px';
+            alertBox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            alertBox.style.color = 'white';
+            alertBox.style.borderRadius = '10px';
+            alertBox.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.5)';
+            alertBox.style.zIndex = '1000';
+            document.body.appendChild(alertBox);
 
             setTimeout(() => {
-                alert('Padayon, Aming Kaulayaw');
-                location.reload();
+                alertBox.remove();
             }, 2000);
-        } else {
-            alert('Please write a message before keeping it!');
         }
     });
 </script>
